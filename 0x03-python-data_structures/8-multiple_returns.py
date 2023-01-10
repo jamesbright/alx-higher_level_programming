@@ -7,8 +7,8 @@ def multiple_returns(sentence):
     s_first_char = None
 
     if not sentence:
-        return (tuple(s_len,s_first_char))
+        return (s_len, s_first_char)
     else:
         s_len = len(sentence)
         s_first_char = sentence[0]
-        return (tuple(s_len, s_first_char))
+        return (s_len, s_first_char)
