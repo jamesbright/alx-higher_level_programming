@@ -4,6 +4,10 @@ def print_matrix_integer(matrix=[[]]):
     """Prints elements of a 
     matrix
     """
-    for row in range(len(matrix)):
-        for col in range(len(matrix[row])):
-            print("{:d}".format(matrix[row][col]))
+    if not matrix:
+        print()
+    else:
+        
+        for row in matrix:
+            for col in row:
+                print("{:d}".format(col), end=' ' if col != row[-1] else '\n')
