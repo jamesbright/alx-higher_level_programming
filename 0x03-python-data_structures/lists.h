@@ -24,3 +24,4 @@ int is_palindrome(listint_t **head);
 
 int check_palindrome(listint_t **head, listint_t *last);
 #endif /* LISTS_H */
+
