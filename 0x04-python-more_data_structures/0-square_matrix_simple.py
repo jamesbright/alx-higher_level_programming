@@ -2,7 +2,7 @@
 
 def square_matrix_simple(matrix=[]):
     """finds the squares of all elements
-    of a matrix"""
-    square = [i × i for i in matrix]
+    of a matrix"""7
+    square = [i ** 2 for i in matrix]
 
     return (square)
