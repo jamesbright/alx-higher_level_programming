@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Defines a Node and Linkedlist class"""
+
+
 class Node:
     """Linkedlist Node class"""
     def __init__(self, data, next_node=None):
@@ -55,8 +57,8 @@ class SinglyLinkedList:
                     and not add_start:
                 tmp = tmp.next_node
             if not add_start:
-                    new.next_node = tmp.next_node
-                    tmp.next_node = new
+                new.next_node = tmp.next_node
+                tmp.next_node = new
             else:
                 new.next_node = tmp
                 self.__head = new
