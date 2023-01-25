@@ -6,8 +6,8 @@ class Square:
     """Defines a square"""
     def __init__(self, size=0, position=(0, 0)):
         """Initializes size and position"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """function returns area data
@@ -30,6 +30,16 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
 
+    def my_print(self):
+        """prints size with # character"""
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print('#', end='')
+                print()
+
     @property
     def position(self):
         """Getter"""
@@ -43,13 +53,3 @@ class Square:
         if any(type(i) != int for i in value or any(j < 0 for j in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
-    def my_print(self):
-        """prints size with # character"""
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print('#', end='')
-                print()
