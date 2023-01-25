@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Node class"""
+"""Defines a Node and Linkedlist class"""
 class Node:
     """Linkedlist Node class"""
     def __init__(self, data, next_node=None):
@@ -33,11 +33,14 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Linkedlist Class"""
+
     def __init__(self):
         """Defines a singly linked list"""
         self.__head = None
 
     def sorted_insert(self, value):
+        """linkedlist in sorted order"""
         new = Node(value)
         tmp = self.__head
         add_start = False
