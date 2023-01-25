@@ -7,4 +7,3 @@ class Square:
     """
 
     pass
-
