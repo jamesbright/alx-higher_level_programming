@@ -8,7 +8,6 @@ class Square:
         """Initializes size"""
         self.__size = size
 
-
     def area(self):
         """function returns area data
         Returns:
