@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle class and methods"""
+"""Rectangle class and methods with attribute width and height"""
 
 
 class Rectangle:
@@ -7,8 +7,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialise Objects"""
-        this.width = width
-        this.height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
