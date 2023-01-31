@@ -38,7 +38,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
@@ -62,4 +61,3 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__width + self.__height)
-
