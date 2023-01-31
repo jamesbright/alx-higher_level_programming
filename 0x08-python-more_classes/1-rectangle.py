@@ -7,33 +7,33 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialise Objects"""
-        this.__width = width
-        this.__height = height
+        this.width = width
+        this.height = height
 
     @property
     def width(self):
         """Get width property"""
-        return self.width
+        return self.__width
 
     @property.setter
     def width(self, value):
         """Set width property"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise valueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
         """Get height property"""
-        return self.height
+        return self.__height
 
-    @property.setter
+    @height.setter
     def height(self, value):
         """Set height property"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise valueError("height must be >= 0")
-        self.height = value
+        self.__height = value
