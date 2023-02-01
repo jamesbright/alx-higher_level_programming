@@ -1,33 +1,26 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])
 """
+    unittest
+"""
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-    """ tests for max_integer
-    """
-
-    def test_max_int_basic(self):
-        """ tests normal list of ints
-        """
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
-
-    def test_max_int_empty(self):
-        """ tests if list is empty
-        """
+    """ class for unittests """
+    def test_max_integer(self):
+        """ check possible cases edge cases """
         self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer([3]), 3)
+        self.assertEqual(max_integer([-3]), -3)
+        self.assertEqual(max_integer([-1, -2, -3]), -1)
+        self.assertEqual(max_integer([15, 10, 5]), 15)
+        self.assertEqual(max_integer([15, 10, 5, -5, -10, 15]), 15)
+        self.assertEqual(max_integer([15, 15, 15]), 15)
 
-    def test_max_int_neg(self):
-        """ tests if list has a negative int
-        """
-        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
-
-    def test_max_int_one(self):
-        """ tests if list has only one item
-        """
-        self.assertEqual(max_integer([1]), 1)
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_type_error(self):
+        """ type_errors """
+        self.assertRaises(TypeError, max_integer, ["h", 1])
+        self.assertRaises(TypeError, max_integer, [2, [2, 1]])
