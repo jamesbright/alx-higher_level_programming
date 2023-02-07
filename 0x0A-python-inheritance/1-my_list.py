@@ -7,10 +7,10 @@ Module with class MyList
 
 
 class MyList(list):
-    """Class with method print_sorted"""
+    """Class with method"""
     pass
 
     def print_sorted(self):
-        """Methot that sorted a list"""
+        """Metho that sorts a list"""
 
         print(sorted(list(self)))
