@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 """
-Line function
+write method
 """
 
 
-def number_of_lines(filename=""):
-    """number of lines from file
+def write_file(filename="", text=""):
+    """write to file
     args:
-        filename: file to read
+        filename: file to manipulate
+    text:
+        text: string to write with
     return:
-        number of lines
+        number of characters written
     """
-    line_num = 0
-    with open(filename, encoding="utf-8") as f:
-        for line in f:
-            line_num += 1
-    return line_num
+
+    with open(filename, mode="w", encoding="utf-8") as f:
+        if f.write(text):
+            return len(text)
