@@ -1,1 +1,1 @@
-Alx python programming
+Holberton school python programming curriculum.
