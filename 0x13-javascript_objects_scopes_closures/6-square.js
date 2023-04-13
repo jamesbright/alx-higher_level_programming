@@ -1,17 +1,13 @@
 #!/usr/bin/node
 const Square5 = require('./5-square.js');
 module.exports = class Square extends Square5 {
-  charPrint (c) {
+  charPrint (c = 'X') {
     let chars = '';
     let i = 0;
     let j = 0;
 
     while (i < this.width) {
-      if (c === undefined) {
-        chars += 'X';
-      } else {
-        chars += 'c';
-      }
+        chars += c;
       i++;
     }
     while (j < this.height) {
