@@ -7,7 +7,7 @@ module.exports = class Square extends Square5 {
     let j = 0;
 
     while (i < this.width) {
-        chars += c;
+      chars += c;
       i++;
     }
     while (j < this.height) {
