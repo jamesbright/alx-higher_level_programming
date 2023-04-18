@@ -9,7 +9,7 @@ if __name__ == "__main__":
                          user=argv[1], passwd=argv[2], db=argv[3])
 
     cur = db.cursor()
-    sql = "SELECT * FROM states WHERE name='{:s}' ORDER BY
+    sql = "SELECT * FROM states WHERE name='{:s}' ORDER BY\
     states.id".format(argv[4])
     cur.execute(sql)
     rows = cur.fetchall()
