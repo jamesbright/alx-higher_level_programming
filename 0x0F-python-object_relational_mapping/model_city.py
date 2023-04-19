@@ -4,7 +4,7 @@
 
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from model_state import Base, State
+
 Base = declarative_base()
 
 
