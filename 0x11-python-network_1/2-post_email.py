@@ -14,7 +14,6 @@ if __name__ == '__main__':
     data = urlencode(val)
     data = data.encode('utf-8')
 
-
     response = Request(url, data)
     with urlopen(response) as res:
         page = res.read().decode('utf-8')
