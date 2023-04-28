@@ -10,4 +10,4 @@ if __name__ == "__main__":
     response = Request(argv[1])
     with urlopen(response) as res:
         xrid_header = res.info()
-        print(xrid_header['X-Request-Id'])
+        print(xrid_header.get('X-Request-Id'))
