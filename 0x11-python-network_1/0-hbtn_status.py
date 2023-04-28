@@ -6,7 +6,6 @@
 if __name__ == '__main__':
     from urllib.request import Request, urlopen
 
-
     response = Request('https://alx-intranet.hbtn.io/status')
     with urlopen(response) as f:
         page = f.read()
